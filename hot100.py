@@ -9,7 +9,7 @@ beginYear = input("Please input the year starts from(for example: 2000):")
 endYear = input("Please input the year ends with(for example: 2020):")
 currentDay = input("Please input the date of current Tuesday(for example: 08-31):")
 baseAddress = "https://www.billboard.com/charts/hot-100/"
-ad = {11, 22, 33, 44, 55, 66, 77, 88, 99}  # 广告
+ad = {11, 22, 33, 44, 55, 66, 77, 88, 99}  # skip ads
 xls = xlsxwriter.Workbook(
     r'Billboard_Hot100_' + beginYear + '-' + currentDay + '_' + endYear + '-' + currentDay +
     '_Created_At_' + time.strftime("%Y-%m-%d_%H.%M.%S", time.localtime()) + '.xlsx')
@@ -18,12 +18,12 @@ for i in range(int(beginYear), int(endYear) + 1):
     thisWeek = 1
     sheet = xls.add_worksheet(str(i))
     sheet.write(0, 0, 'Billboard Hot 100 ' + str(i) + '-' + currentDay)
-    sheet.write(1, 0, '歌曲名', bold)
-    sheet.write(1, 1, '艺术家', bold)
-    sheet.write(1, 2, '本周排名', bold)
-    sheet.write(1, 3, '上周排名', bold)
-    sheet.write(1, 4, '最高排名', bold)
-    sheet.write(1, 5, '在榜周数', bold)
+    sheet.write(1, 0, 'Song', bold)
+    sheet.write(1, 1, 'Artist', bold)
+    sheet.write(1, 2, 'This Week', bold)
+    sheet.write(1, 3, 'Last Week', bold)
+    sheet.write(1, 4, 'Peak', bold)
+    sheet.write(1, 5, 'Weeks on Chart', bold)
     address = baseAddress + str(i) + "-" + currentDay
     browser = webdriver.Chrome(r'chromedriver.exe')
     browser.get(address)
