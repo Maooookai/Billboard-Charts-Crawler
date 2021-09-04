@@ -1,4 +1,4 @@
-# Billboard Hot 100 Charts Crawler
+# Billboard Charts Crawler
 
 ### What is this?
 
@@ -11,6 +11,8 @@ To download other version of chromedriver, please click the link below:
 
 ### How to use?
 
+**Currently, there is a tool only for Hot 100, but more charts will be supported later.**
+
 Make sure you have installed python, then install the requirements.
 
 `pip install -r requirements.txt`
@@ -18,6 +20,12 @@ Make sure you have installed python, then install the requirements.
 Then run `hot100.py`
 
 `python hot100.py`
+
+Then
+
+### Notice
+
+This is how script running looks like:
 
 ![Screenshot](images/screenshot.png)
 
