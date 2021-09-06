@@ -25,7 +25,7 @@ Then
 
 ### Notice
 
-This is how script running looks like:
+This is what the script running looks like:
 
 ![Screenshot](images/screenshot.png)
 
