@@ -21,7 +21,6 @@ Then run `hot100.py`
 
 `python hot100.py`
 
-Then
 
 ### Notice
 
